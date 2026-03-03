@@ -1,10 +1,34 @@
-{{> menu id="dashboard"}}
+{{> menu}}
 
-<section class="ui left aligned middle aligned segment">
-  
-    <h2>About the Playlist App</h2>
-      <p>
-        More information about the app will be displayed here
-      </p>
+<h1>{{title}}</h1>
 
-</section>
+<h2>{{employee.fullname}}</h2>
+<img src="{{employee.image}}" alt="{{employee.name}}" width="150">
+
+<ul>
+  <li>Job: {{employee.job}}</li>
+  <li>City: {{employee.city}}</li>
+  <li>Joined: {{employee.joined}}</li>
+  <li>Number of mates: {{employee.mates}}</li>
+</ul>
+
+<div class="ui centered card">
+  <div class="image">
+    <img src="{{employee.image}}" alt="{{employee.name}}">
+  </div>
+  <div class="content">
+    <a class="header">{{employee.fullname}}</a>
+    <div class="meta">
+      <span class="date">Joined in {{employee.joined}}</span>
+    </div>
+    <div class="description">
+        {{employee.name}} is a {{employee.job}} living in {{employee.city}}.
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="user icon"></i>
+      {{employee.mates}} contacts
+    </a>
+  </div>
+</div>
