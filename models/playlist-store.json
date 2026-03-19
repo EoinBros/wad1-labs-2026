@@ -1,0 +1,66 @@
+{
+  "playlistCollection": [
+    {
+      "id": "01",
+      "title": "Beethoven Sonatas",
+      "songs": [
+        {
+          "id": "04",
+          "title": "Piano Sonata No. 3",
+          "artist": "Beethoven"
+        },
+        {
+          "id": "05",
+          "title": "Piano Sonata No. 7",
+          "artist": "Beethoven"
+        },
+        {
+          "id": "06",
+          "title": "Piano Sonata No. 10",
+          "artist": "Beethoven"
+        },
+        {
+          "id": "9b3ea129-85af-4ef9-bc84-31d68d2ac02c",
+          "title": "new",
+          "artist": "jerry"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Beethoven Concertos",
+      "songs": [
+        {
+          "id": "07",
+          "title": "Piano Concerto No. 0",
+          "artist": "Beethoven"
+        },
+        {
+          "id": "08",
+          "title": "Piano Concerto No. 4",
+          "artist": "Beethoven"
+        },
+        {
+          "id": "09",
+          "title": "Piano Concerto No. 6",
+          "artist": "Beethoven"
+        },
+        {
+          "id": "6e1a1414-f06f-44b7-94f8-139f19f40b13",
+          "title": "new ",
+          "artist": "john"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Beethoven Unfinished Symphonies",
+      "songs": []
+    },
+    {
+      "id": "a072f39a-2f98-452a-8d9d-d473a0007cf8",
+      "title": "grad",
+      "songs": []
+    }
+  ]
+}
