@@ -20,6 +20,10 @@ const playlistStore = {
     this.store.addItem(this.collection, id, this.array, song);
   },
 
+  editSong(id, songId, updatedSong) {
+    this.store.editItem(this.collection, id, songId, this.array, updatedSong);
+  },
+
   addPlaylist(playlist) {
     this.store.addCollection(this.collection, playlist);
   },
