@@ -16,6 +16,13 @@ const playlistStore = {
     return this.store.findOneBy(this.collection, (playlist => playlist.id === id));
   },
 
+  searchPlaylist(search) {
+    return this.store.findBy(
+      this.collection,
+      (playlist => playlist.title.toLowerCase().includes(search.toLowerCase()))
+    );
+  },
+
   addSong(id, song) {
     this.store.addItem(this.collection, id, this.array, song);
   },
