@@ -18,6 +18,15 @@
       <div class="ui centered three statistics">
         <div class="ui statistic">
           <div class="value">
+            <i class="users icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumUsers}} USERS
+          </div>
+        </div>
+
+        <div class="ui statistic">
+          <div class="value">
             <i class="microphone icon"></i>
           </div>
           <div class="label">
@@ -33,6 +42,11 @@
             {{displayNumSongs}} SONGS
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="ui sixteen wide column">
+      <div class="ui centered three statistics">
 
         <div class="ui blue statistic">
           <div class="value">
@@ -42,11 +56,6 @@
             AVERAGE SONGS PER<br> PLAYLIST: {{displayAverage}}
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="ui sixteen wide column">
-      <div class="ui centered three statistics">
 
         <div class="ui yellow statistic">
           <div class="value">
@@ -78,9 +87,9 @@
             <i class="plus icon"></i>
           </div>
           <div class="label">
-            LARGEST PLAYLIST: {{highestSongCount}} SONGS
+            LARGEST PLAYLIST: {{longest}} SONGS
             <table>
-              {{#each displayMostSongs}}
+              {{#each longestTitles}}
               <tr>
                 <td>{{this}}</td>
               </tr>

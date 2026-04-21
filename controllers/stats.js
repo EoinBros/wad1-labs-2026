@@ -1,6 +1,7 @@
 "use strict";
 import logger from "../utils/logger.js";
 import playlistStore from "../models/playlist-store.js";
+import userStore from "../models/user-store.js";
 import accounts from './accounts.js';
 
 const stats = {
@@ -12,10 +13,13 @@ const stats = {
 
       // app statistics calculations
       const playlists = playlistStore.getAllPlaylists();
+      const users = userStore.getAllUsers();
 
       let numPlaylists = playlists.length;
 
       let numSongs = playlists.reduce((total, playlist) => total + playlist.songs.length, 0);
+
+      let numUsers = users.length;
 
       let average = numPlaylists > 0 ? (numSongs / numPlaylists).toFixed(2) : 0;
 
@@ -32,6 +36,7 @@ const stats = {
       let longestPlaylistTitles = longestPlaylists.map(item => item.title);
       
       const statistics = {
+        displayNumUsers: numUsers,
         displayNumPlaylists: numPlaylists,
         displayNumSongs: numSongs,
         displayAverage: average,
