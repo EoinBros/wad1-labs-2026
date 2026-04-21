@@ -1,79 +1,12 @@
 {
   "playlistCollection": [
     {
-      "id": "01",
-      "title": "Beethoven Sonatas",
-      "rating": 5,
-      "songs": [
-        {
-          "id": "04",
-          "title": "Piano Sonata No. 3",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "05",
-          "title": "Piano Sonata No. 7",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "06",
-          "title": "Piano Sonata No. 10",
-          "artist": "Beethoven"
-        }
-      ]
-    },
-    {
-      "id": "02",
-      "title": "Beethoven Concertos",
-      "rating": 4,
-      "songs": [
-        {
-          "id": "07",
-          "title": "Piano Concerto No. 0",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "08",
-          "title": "Piano Concerto No. 4",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "09",
-          "title": "Piano Concerto No. 6",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "6e1a1414-f06f-44b7-94f8-139f19f40b13",
-          "title": "new ",
-          "artist": "john"
-        }
-      ]
-    },
-    {
-      "id": "03",
-      "title": "Beethoven Unfinished Symphonies",
-      "rating": 2,
-      "songs": []
-    },
-    {
-      "id": "a072f39a-2f98-452a-8d9d-d473a0007cf8",
-      "title": "grad",
-      "rating": 0,
-      "songs": []
-    },
-    {
-      "id": "b1b369cf-64db-4eda-a5c2-ee445a46e296",
-      "title": "joshua",
-      "rating": 4,
-      "date": "2026-04-13T08:40:29.872Z",
-      "songs": []
-    },
-    {
-      "id": "d588ff3f-2ade-4beb-923b-1d3fb33560da",
-      "title": "john",
-      "rating": 5,
-      "date": "2026-04-13T08:48:40.310Z",
-      "songs": []
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "id": "cf183dd9-d009-491f-8017-84f387cda39e",
+      "title": "homer playlist",
+      "rating": 3,
+      "songs": [],
+      "date": "2026-04-21T15:55:53.330Z"
     }
   ]
 }
