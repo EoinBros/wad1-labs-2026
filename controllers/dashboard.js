@@ -58,28 +58,32 @@ const dashboard = {
 
   addPlaylist(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
-    logger.debug(loggedInUser.id);
     const timestamp = new Date();
 	
     const newPlaylist = {
-      userid: loggedInUser.id,
       id: uuidv4(),
+      userid: loggedInUser.id,
       title: request.body.title,
       rating: parseInt(request.body.rating),
       songs: [],
       date: timestamp
     };
 
-    playlistStore.addPlaylist(newPlaylist);
-    response.redirect('/dashboard');
+    playlistStore.addPlaylist(newPlaylist, request.files.picture, function(error) {
+      if (error) {
+        logger.error("Error adding playlist:", error);
+      }
+      response.redirect("/dashboard");
+    });
   },
 
 
   deletePlaylist(request, response) {
     const playlistId = request.params.id;
     logger.debug(`Deleting Playlist ${playlistId}`);
-    playlistStore.removePlaylist(playlistId);
-    response.redirect("/dashboard");
+    playlistStore.removePlaylist(playlistId, function() {
+      response.redirect("/dashboard");
+    });
   },
 };
 
