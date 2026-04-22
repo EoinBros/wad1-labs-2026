@@ -20,8 +20,20 @@ const userStore = {
     return this.store.findOneBy(this.collection, (user => user.email === email));
   },
   
-  addUser(user) {
-    this.store.addCollection(this.collection, user);
+  addUser(user, file, response) {
+    if (file) {
+      this.store.addToCloudinary(file).then((result) => {
+        user.picture = result;
+        this.store.addCollection(this.collection, user);
+        response();
+      }).catch((error) => {
+        logger.error("Error uploading user picture:", error);
+        response(error);
+      });
+    } else {
+      this.store.addCollection(this.collection, user);
+      response();
+    }
   },
 
 };

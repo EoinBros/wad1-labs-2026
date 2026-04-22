@@ -41,10 +41,11 @@ const accounts = {
   register(request, response) {
     const user = request.body;
     user.id = uuidv4();
-    userStore.addUser(user);
-    logger.info('registering' + user.email);
-    response.cookie('playlist', user.email);
-    response.redirect('/start');
+    userStore.addUser(user, request.files.picture, function() {
+      logger.info('registering' + user.email);
+      response.cookie('playlist', user.email);
+      response.redirect('/start');
+    });
   },
   
   //authenticate function to check user credentials and either render the login page again or the start page.
